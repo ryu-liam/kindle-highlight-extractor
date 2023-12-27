@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Kindle Highlight Extractor",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "storage"],
+  "description": "キンドルのハイライトを抽出して表示します",
+  "action": {
+    "default_popup": "static/popup.html"
+  },
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://read.amazon.co.jp/notebook*"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["js/actionRequest.js"]
+    }
+  ],
+  "icons": {
+    "48": "images/icon-32.png"
+  }
+}

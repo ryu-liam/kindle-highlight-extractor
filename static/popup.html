@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>Kindle Highlight Copy</title>
+  <style>
+    body {
+      padding: 0;
+    }
+
+    .container {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      color: rgba(0, 0, 0, 0.87);
+      min-height: 400px;
+      min-width: 400px;
+      overflow-y: auto;
+    }
+
+    #book-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #book-info {
+      padding: 16px;
+      background-color: rgb(243, 244, 246);
+    }
+
+    #book-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #book-author {
+      margin-top: 2px;
+      font-size: 14px;
+      color: rgb(107, 114, 128)
+    }
+
+    #highlight-container {
+      padding: 16px;
+    }
+
+    #highlight-container span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    ul {
+      font-size: 14px;
+      padding-left: 0;
+      list-style: decimal;
+      list-style-position: inside;
+    }
+
+    li {
+      margin-top: 8px;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="book-content"></div>
+  </div>
+  <script type="module" src="../scripts/popup.js"></script>
+</body>
+
+</html>
